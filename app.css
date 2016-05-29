@@ -1,0 +1,28 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+}
+
+.html-output {
+  height: 50%;
+  width: 100%;
+  overflow: auto;
+}
+
+textarea {
+  height: 50%;
+  width: 100%;
+  background-color: #424242;
+  border-color: #424242;
+  color: white;
+  outline: none;
+}
+
+.export-button {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}

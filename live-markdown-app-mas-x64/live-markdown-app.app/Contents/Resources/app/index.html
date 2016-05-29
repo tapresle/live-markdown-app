@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Live Markdown Conversion App</title>
+    <link rel="stylesheet" type="text/css" href="cyborg.min.css">
+    <link rel="stylesheet" type="text/css" href="app.css">
+  </head>
+  <body ng-app="live-md" ng-controller="live-md-ctrl as liveMdCtrl">
+    <textarea ng-change="liveMdCtrl.update()" ng-model="liveMdCtrl.basicInput"></textarea>
+    <div class="html-output" ng-bind-html="liveMdCtrl.htmlOutput"></div>
+    <button class="btn btn-default export-button" ng-click="liveMdCtrl.export()">Export Converted HTML</button>
+    <!-- libs -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script>
+      // Load jQuery into the window if in Electron
+      window.$ = window.jQuery = require('jquery');
+    </script>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
